@@ -29,6 +29,8 @@ extension WireframeInput {
         return (UIApplication.shared.windows.filter( { $0.isKeyWindow } ).first )
     }
     
+    var storyboardName: String {  "" } 
+    
     var navigation: UINavigationController? {
         view.navigationController
     }

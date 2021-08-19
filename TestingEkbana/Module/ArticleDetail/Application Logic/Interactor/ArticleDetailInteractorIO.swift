@@ -6,10 +6,10 @@
 //
 //
 
-protocol ArticleDetailInteractorInput: class {
+protocol ArticleDetailInteractorInput: AnyObject {
 
 }
 
-protocol ArticleDetailInteractorOutput: class {
+protocol ArticleDetailInteractorOutput: AnyObject {
 
 }

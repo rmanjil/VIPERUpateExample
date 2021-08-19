@@ -6,6 +6,6 @@
 //
 //
 
-protocol ArticleDetailViewInterface: class {
+protocol ArticleDetailViewInterface: AnyObject {
     
 }

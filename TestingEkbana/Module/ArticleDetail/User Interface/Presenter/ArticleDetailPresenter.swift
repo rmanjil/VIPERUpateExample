@@ -8,7 +8,7 @@
 
 import Foundation
 
-class ArticleDetailPresenter {
+class ArticleDetailPresenter: BasePresenter {
     
 	// MARK: Properties
     

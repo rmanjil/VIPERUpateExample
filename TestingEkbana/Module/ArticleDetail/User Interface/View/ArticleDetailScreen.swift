@@ -7,8 +7,9 @@
 //
 
 import UIKit
+import BaseDesignFramework
 
-class ArticleDetailScreen: <#UIView#> {
+class ArticleDetailScreen: BaseView {
     
     // MARK: Properties
 

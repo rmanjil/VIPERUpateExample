@@ -6,6 +6,6 @@
 //
 //
 
-protocol ArticleDetailModuleInterface: class {
+protocol ArticleDetailModuleInterface: AnyObject {
     
 }
