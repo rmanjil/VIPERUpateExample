@@ -17,15 +17,12 @@ class NewsListController: AppBaseController {
         baseView as! NewsListScreen
     }
     
-//    private var viewModel: <#ViewMode#>  {
-//        baseViewModel as! <#ViewMode#>
-//    }
-    
-    
   //  var presenter: NewsListModuleInterface?
     var presenter:  NewsListPresenter {
         basePresenter as! NewsListPresenter
     }
+    
+    var gotoArticleDetail: ((_ article:Article) -> Void)?
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -79,5 +76,7 @@ extension NewsListController: UITableViewDelegate, UITableViewDataSource {
 extension NewsListController: ArticleSelection {
     func selectedArticle(article: Article) {
       //  viewModel.trigger.send(AppRoute.articleDetail(article:  article))
+        
+        gotoArticleDetail?(article)
     }
 }

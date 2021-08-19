@@ -26,7 +26,7 @@ extension NewsListWireframe: NewsListWireframeInput {
         let interactor = NewsListInteractor()//(service: service)
         let presenter = NewsListPresenter(interactor: interactor)
         let viewController = NewsListController(baseView: NewsListScreen(), basePresenter: presenter)//viewControllerFromStoryboard(of: NewsListViewController.self)
-        
+        viewController.gotoArticleDetail = gotoArticle(article:)
      //   viewController.presenter = presenter
       //  interactor.output = presenter
         presenter.interactor = interactor
@@ -35,5 +35,12 @@ extension NewsListWireframe: NewsListWireframeInput {
         
         self.view = viewController
         return viewController
+    }
+}
+
+
+extension NewsListWireframe {
+    func gotoArticle(article: Article) {
+        view.navigationController?.pushViewController(ArticleDetailWireframe().getMainView(), animated: true)
     }
 }

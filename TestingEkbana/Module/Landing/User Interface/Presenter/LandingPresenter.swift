@@ -12,6 +12,7 @@ import Combine
 class BasePresenter {
     var bag = Set<AnyCancellable>()
     
+    
     deinit {
         debugPrint("De-Initialized --> \(String(describing: self))")
     }
